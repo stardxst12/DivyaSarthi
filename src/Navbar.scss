@@ -1,0 +1,224 @@
+:root {
+  --main-color: #141414;
+  --primary-lilac: #c8a2c8;
+  --hover-lilac: #a272a2;
+  --light-lilac: #f4e1f4;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  color: white;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.6);
+
+  &.scrolled {
+    background: black;
+  }
+}
+
+.container {
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 50px;
+      margin-right: 40px;
+    }
+
+    .nav-button {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      margin-right: 20px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: var(--primary-lilac);
+        color: black;
+        box-shadow: 0px 4px 10px rgba(200, 162, 200, 0.5);
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 5px;
+      padding: 4px 8px;
+      margin-right: 15px;
+
+      .search-input {
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 14px;
+        width: 160px;
+        border-radius: 5px;
+      }
+
+      .icon {
+        color: black;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        border: 2px solid var(--primary-lilac);
+      }
+    }
+
+    .nav-button {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      margin-right: 15px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: var(--primary-lilac);
+        color: black;
+        box-shadow: 0px 4px 10px rgba(200, 162, 200, 0.5);
+      }
+    }
+
+    .profile {
+      position: relative;
+
+      .options {
+        display: none;
+        background-color: var(--main-color);
+        border-radius: 5px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 180px;
+        text-align: left;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--primary-lilac);
+      }
+
+      .dropdown-item {
+        padding: 12px;
+        cursor: pointer;
+        display: block;
+        color: white;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+          background: var(--primary-lilac);
+          color: black;
+        }
+      }
+
+      .logout {
+        color: red;
+        font-weight: bold;
+
+        &:hover {
+          background: darkred;
+          color: white;
+        }
+      }
+
+      &:hover .options {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.home-logo {
+  cursor: pointer;
+}
+// Add these at the bottom of your existing file
+/* ===== [NEW] Search Bar Styles ===== */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 5px 15px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(200, 162, 200, 0.3);
+  }
+
+  &:focus-within {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-lilac);
+    box-shadow: 0 0 10px rgba(200, 162, 200, 0.3);
+  }
+
+  .nav-search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 6px;
+    width: 160px;
+    font-size: 14px;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .nav-search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--primary-lilac);
+      transform: scale(1.1);
+    }
+
+    .search-icon {
+      font-size: 20px;
+    }
+  }
+}
+
+/* Keep all your existing styles below this line */

@@ -1,0 +1,392 @@
+$color-primary: #c8a2c8; // Lilac primary color
+$color-text: #4a3a4a; // Dark lilac for text
+$color-background: #f5f0f5; // Very light lilac
+$color-border: #d8c0d8; // Light lilac border
+$color-box: #f9f4f9; // Off-white with lilac tint
+$color-shadow: rgba(200, 162, 200, 0.3); // Lilac shadow
+
+// Ishihara test intensity levels
+$color-mild: #e6d4e6; // Very soft lilac
+$color-moderate: #d8b3d8; // Medium lilac 
+$color-severe: #c8a2c8; // Standard lilac
+
+.test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    background-color: $color-background;
+    color: $color-text;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  
+    // Mild Theme
+    &.mild {
+      background-color: scale-color($color-mild, $lightness: 8%);
+      color: adjust-color($color-text, $lightness: -10%);
+
+      .test-box, .results-section {
+        background: scale-color($color-mild, $lightness: 5%);
+        color: adjust-color($color-text, $lightness: -15%);
+        border: 1px solid rgba(200, 162, 200, 0.3);
+      }
+
+      .test-completed-text {
+        color: adjust-color($color-primary, $lightness: -15%);
+      }
+
+      .test-input {
+        border: 2px solid $color-primary;
+        background: scale-color($color-primary, $lightness: 20%);
+        color: $color-text;
+      }
+
+      .test-input:focus {
+        border-color: adjust-color($color-primary, $lightness: -10%);
+        box-shadow: 0 0 8px rgba(200, 162, 200, 0.5);
+      }
+
+      .test-button, .adjust-button, .reset-button {
+        background: $color-primary;
+        color: white;
+        border: 2px solid adjust-color($color-primary, $lightness: -10%);
+      }
+
+      .test-button:hover, .adjust-button:hover, .reset-button:hover {
+        background: adjust-color($color-primary, $lightness: -10%);
+      }
+    }
+  
+    // Moderate Theme
+    &.moderate {
+      background-color: $color-moderate;
+      color: adjust-color($color-text, $lightness: -20%);
+
+      .test-box, .results-section {
+        background: scale-color($color-moderate, $lightness: 5%);
+        color: adjust-color($color-text, $lightness: -25%);
+        border: 1px solid rgba(200, 162, 200, 0.5);
+      }
+
+      .test-completed-text {
+        color: adjust-color($color-primary, $lightness: -25%);
+      }
+
+      .test-input {
+        border: 2px solid adjust-color($color-primary, $lightness: -15%);
+        background: $color-primary;
+        color: white;
+      }
+
+      .test-input:focus {
+        border-color: adjust-color($color-primary, $lightness: -20%);
+        box-shadow: 0 0 8px rgba(160, 122, 160, 0.6);
+      }
+
+      .test-button, .adjust-button, .reset-button {
+        background: adjust-color($color-primary, $lightness: -15%);
+        color: white;
+        border: 2px solid adjust-color($color-primary, $lightness: -20%);
+      }
+
+      .test-button:hover, .adjust-button:hover, .reset-button:hover {
+        background: adjust-color($color-primary, $lightness: -20%);
+      }
+    }
+  
+    // Severe Theme
+    &.severe {
+      background-color: adjust-color($color-severe, $lightness: -10%);
+      color: #2a1a2a;
+
+      .test-box, .results-section {
+        background: $color-severe;
+        color: #1a0a1a;
+        border: 1px solid rgba(160, 122, 160, 0.7);
+      }
+
+      .test-completed-text {
+        color: adjust-color($color-primary, $lightness: -35%);
+      }
+
+      .test-input {
+        border: 2px solid adjust-color($color-primary, $lightness: -25%);
+        background: adjust-color($color-primary, $lightness: -15%);
+        color: white;
+      }
+
+      .test-input:focus {
+        border-color: adjust-color($color-primary, $lightness: -30%);
+        box-shadow: 0 0 8px rgba(140, 102, 140, 0.7);
+      }
+
+      .test-button, .adjust-button, .reset-button {
+        background: adjust-color($color-primary, $lightness: -25%);
+        color: white;
+        border: 2px solid adjust-color($color-primary, $lightness: -30%);
+      }
+
+      .test-button:hover, .adjust-button:hover, .reset-button:hover {
+        background: adjust-color($color-primary, $lightness: -30%);
+      }
+    }
+}
+
+// Common styles (unchanged)
+.instructions, .test-section, .results-section {
+    background: $color-box;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px $color-shadow;
+    text-align: center;
+    max-width: 900px;
+    width: 90vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1, h2 { 
+        color: $color-primary;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+}
+
+.test-image { 
+    width: 100%; 
+    max-width: 350px; 
+    height: auto; 
+    margin-bottom: 15px; 
+    border-radius: 5px;
+    border: 2px solid $color-border;
+}
+
+.test-input {
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid $color-border;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:focus { 
+        border-color: $color-primary; 
+        box-shadow: 0 0 8px rgba(200, 162, 200, 0.5); 
+    }
+}
+
+.test-button, .adjust-button, .reset-button {
+    background-color: $color-primary;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    &:hover { 
+        background-color: adjust-color($color-primary, $lightness: -10%); 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+}
+
+.color-blindness-options label {
+  display: block;
+  margin: 5px 0;
+  align-items: self-start;
+}
+
+.option-radio {
+  margin-right: 10px;
+}
+
+/*$color-mild-bg: linear-gradient(135deg, #ffeb99, #ffcc66);
+$color-moderate-bg: linear-gradient(135deg, #ffad33, #ff8800);
+$color-severe-bg: linear-gradient(135deg, #ff6666, #cc0000);
+
+$color-mild-text: #5a4a00;
+$color-moderate-text: #5a2a00;
+$color-severe-text: #4a0000;
+
+$color-mild-box: #fff3cc;
+$color-moderate-box: #ffd699;
+$color-severe-box: #ffb3b3;
+
+$color-background: white;
+$color-primary: #007bff;
+$color-primary-dark: #0056b3;
+$color-text: #333;
+$color-border: #ccc;
+$color-box: white;
+$color-shadow: rgba(0, 0, 0, 0.2);
+
+.test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: $color-background;
+    color: $color-text;
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Severity-Based Themes 
+.mild-color-blindness {
+    background: $color-mild-bg;
+    color: $color-mild-text;
+    
+    .test-box, .result-box {
+        background: $color-mild-box;
+    }
+}
+
+.moderate-color-blindness {
+    background: $color-moderate-bg;
+    color: $color-moderate-text;
+    
+    .test-box, .result-box {
+        background: $color-moderate-box;
+    }
+}
+
+.severe-color-blindness {
+    background: $color-severe-bg;
+    color: $color-severe-text;
+    
+    .test-box, .result-box {
+        background: $color-severe-box;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.test-box, .result-box {
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px $color-shadow;
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.test-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.test-input {
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid $color-border;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.test-input:focus {
+    border-color: $color-primary;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+.next-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+.next-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    transform: scale(1.05);
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.radio-options label {
+    font-size: 16px;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.radio-options input {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .test-box, .result-box {
+        width: 90%;
+        padding: 30px;
+    }
+    .test-image {
+        max-width: 340px;
+    }
+    .test-input, .next-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-box, .result-box {
+        width: 95%;
+        padding: 25px;
+    }
+    .test-image {
+        max-width: 300px;
+    }
+    .test-input, .next-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+*/
+
+ 
+
+
+
+

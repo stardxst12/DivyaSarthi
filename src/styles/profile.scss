@@ -1,0 +1,207 @@
+@import "../index.css";
+
+.profile-page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(106, 5, 114, 0.1), rgba(106, 5, 114, 0.05)), 
+              url('/Divyasarthi2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6a0572;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(106, 5, 114, 0.2);
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.avatar-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #6a0572;
+  box-shadow: 0 4px 10px rgba(106, 5, 114, 0.3);
+
+  .profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(106, 5, 114, 0.7);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .edit-icon {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background: rgba(106, 5, 114, 0.9);
+    }
+  }
+}
+
+.user-details {
+  text-align: center;
+  flex: 1;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-email {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+.user-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a0572;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}
+
+.profile-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    svg {
+      font-size: 1.2rem;
+    }
+
+    &.edit-btn {
+      background: #6a0572;
+      color: white;
+
+      &:hover {
+        background: #5a0462;
+      }
+    }
+
+    &.saved-btn {
+      background: #9a4ca2;
+      color: white;
+
+      &:hover {
+        background: #8a3b92;
+      }
+    }
+
+    &.pref-btn {
+      background: #ba8dc2;
+      color: white;
+
+      &:hover {
+        background: #aa7cb2;
+      }
+    }
+
+    &.logout-btn {
+      background: #f0f0f0;
+      color: #6a0572;
+
+      &:hover {
+        background: #e0e0e0;
+      }
+    }
+  }
+}

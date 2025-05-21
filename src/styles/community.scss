@@ -1,0 +1,28 @@
+@import "../index.css";
+
+.community-page {
+  background-image: url('/Divyasarthi2.jpg');
+  background-color: #ffe6e6;
+}
+
+.community-support {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.support-options {
+  display: flex;
+  gap: 20px;
+}
+
+.option {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

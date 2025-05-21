@@ -1,0 +1,63 @@
+/* Set full-page lilac background */
+.login-page {
+    background-color: #c8a2c8; /* Lilac */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* White Box for the Login Form */
+  .login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px; /* Adjust width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ensure Navbar Doesn't Hide Heading */
+  h2 {
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  /* Style Inputs */
+  input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style Button */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8155a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6a3c8a;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

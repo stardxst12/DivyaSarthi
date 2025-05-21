@@ -1,0 +1,81 @@
+:root {
+  --font-size: 16px; /* Default font size */
+  --button-padding: 12px 24px; /* Default button padding */
+}
+
+body {
+  font-size: var(--font-size); /* Dynamically set font size */
+  transition: font-size 0.3s ease; /* Smooth transition */
+}
+
+button {
+  padding: var(--button-padding); /* Dynamically set button padding */
+  font-size: var(--font-size); /* Ensure button also follows the font size */
+  transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+h1, h2, h3, p, .toggle-btn {
+  font-size: var(--font-size); /* Ensure headings and text follow the font size */
+}
+
+.toggle-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: var(--button-padding); /* Dynamically set button padding */
+  font-size: var(--font-size);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, padding 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #388e3c;
+}
+
+.parkinsons-container {
+  margin-top: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.analysis-status p {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.dots-loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dots-loader span {
+  width: 10px;
+  height: 10px;
+  background-color: #4caf50;
+  margin: 0 5px;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.dots-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.severity-result {
+  margin-top: 30px;
+  font-size: var(--font-size); /* Adjust severity result with the global font-size */
+  color: #222;
+}

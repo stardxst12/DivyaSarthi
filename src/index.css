@@ -1,0 +1,33 @@
+:root {
+  --primary-lilac: #c8a2c8;
+  --hover-lilac: #a272a2;
+  --light-lilac: #f4e1f4;
+  --user-font-size: 16px;
+}
+
+body {
+  font-size: var(--user-font-size);
+  transition: font-size 0.3s ease;
+}
+
+body.dyslexic-font {
+  font-family: "OpenDyslexic", Arial, sans-serif;
+}
+
+body.grayscale {
+  filter: grayscale(100%);
+}
+
+body.high-contrast {
+  filter: contrast(200%);
+}
+
+body.negative-contrast {
+  filter: invert(100%);
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

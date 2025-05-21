@@ -1,0 +1,344 @@
+[
+    {
+        "id": 1,
+        "image": "/ishihara/plate_1.jpg",
+        "category": "transformation",
+        "normal_vision": "12",
+        "color_blind_vision": "12",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 2,
+        "image": "/ishihara/plate_2.jpg",
+        "category": "transformation",
+        "normal_vision": "8",
+        "color_blind_vision": "3",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 3,
+        "image": "/ishihara/plate_3.jpg",
+        "category": "transformation",
+        "normal_vision": "6",
+        "color_blind_vision": "5",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 4,
+        "image": "/ishihara/plate_4.jpg",
+        "category": "transformation",
+        "normal_vision": "29",
+        "color_blind_vision": "70",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 5,
+        "image": "/ishihara/plate_5.jpg",
+        "category": "transformation",
+        "normal_vision": "57",
+        "color_blind_vision": "35",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 6,
+        "image": "/ishihara/plate_6.jpg",
+        "category": "transformation",
+        "normal_vision": "5",
+        "color_blind_vision": "2",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 7,
+        "image": "/ishihara/plate_7.jpg",
+        "category": "transformation",
+        "normal_vision": "3",
+        "color_blind_vision": "5",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 8,
+        "image": "/ishihara/plate_8.jpg",
+        "category": "transformation",
+        "normal_vision": "15",
+        "color_blind_vision": "17",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 9,
+        "image": "/ishihara/plate_9.jpg",
+        "category": "transformation",
+        "normal_vision": "74",
+        "color_blind_vision": "21",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 10,
+        "image": "/ishihara/plate_10.jpg",
+        "category": "transformation",
+        "normal_vision": "2",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 11,
+        "image": "/ishihara/plate_11.jpg",
+        "category": "transformation",
+        "normal_vision": "6",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 12,
+        "image": "/ishihara/plate_12.jpg",
+        "category": "transformation",
+        "normal_vision": "97",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 13,
+        "image": "/ishihara/plate_13.jpg",
+        "category": "transformation",
+        "normal_vision": "45",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 14,
+        "image": "/ishihara/plate_14.jpg",
+        "category": "transformation",
+        "normal_vision": "5",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 15,
+        "image": "/ishihara/plate_15.jpg",
+        "category": "transformation",
+        "normal_vision": "7",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 16,
+        "image": "/ishihara/plate_16.jpg",
+        "category": "transformation",
+        "normal_vision": "16",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 17,
+        "image": "/ishihara/plate_17.jpg",
+        "category": "transformation",
+        "normal_vision": "73",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 18,
+        "image": "/ishihara/plate_18.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "5",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 19,
+        "image": "/ishihara/plate_19.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "2",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 20,
+        "image": "/ishihara/plate_20.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "45",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 21,
+        "image": "/ishihara/plate_21.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "73",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 22,
+        "image": "/ishihara/plate_22.jpg",
+        "category": "transformation",
+        "normal_vision": "26",
+        "color_blind_vision": "",
+        "protanopia": "6",
+        "deuteranopia": "2"
+    },
+    {
+        "id": 23,
+        "image": "/ishihara/plate_23.jpg",
+        "category": "transformation",
+        "normal_vision": "42",
+        "color_blind_vision": "",
+        "protanopia": "2",
+        "deuteranopia": "4"
+    },
+    {
+        "id": 24,
+        "image": "/ishihara/plate_24.jpg",
+        "category": "transformation",
+        "normal_vision": "35",
+        "color_blind_vision": "",
+        "protanopia": "5",
+        "deuteranopia": "3"
+    },
+    {
+        "id": 25,
+        "image": "/ishihara/plate_25.jpg",
+        "category": "transformation",
+        "normal_vision": "96",
+        "color_blind_vision": "",
+        "protanopia": "6",
+        "deuteranopia": "9"
+    },
+    {
+        "id": 26,
+        "image": "/ishihara/plate_26.jpg",
+        "category": "transformation",
+        "normal_vision": "purple and red spots",
+        "color_blind_vision": "",
+        "protanopia": "only the purple line",
+        "deuteranopia": "only the red line"
+    },
+    {
+        "id": 27,
+        "image": "/ishihara/plate_27.jpg",
+        "category": "transformation",
+        "normal_vision": "purple and red spots",
+        "color_blind_vision": "",
+        "protanopia": "only the purple line",
+        "deuteranopia": "only the red line"
+    },
+    {
+        "id": 28,
+        "image": "/ishihara/plate_28.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "a line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 29,
+        "image": "/ishihara/plate_29.jpg",
+        "category": "hidden_digit",
+        "normal_vision": "nothing",
+        "color_blind_vision": "a line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 30,
+        "image": "/ishihara/plate_30.jpg",
+        "category": "transformation",
+        "normal_vision": "blue-green line",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 31,
+        "image": "/ishihara/plate_31.jpg",
+        "category": "transformation",
+        "normal_vision": "blue-green line",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 32,
+        "image": "/ishihara/plate_32.jpg",
+        "category": "transformation",
+        "normal_vision": "orange line",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 33,
+        "image": "/ishihara/plate_33.jpg",
+        "category": "transformation",
+        "normal_vision": "orange line",
+        "color_blind_vision": "nothing",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 34,
+        "image": "/ishihara/plate_34.jpg",
+        "category": "transformation",
+        "normal_vision": "blue-green and yellow-green line",
+        "color_blind_vision": "red-green and violet line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 35,
+        "image": "/ishihara/plate_35.jpg",
+        "category": "transformation",
+        "normal_vision": "blue-green and yellow-green line",
+        "color_blind_vision": "blue-green and violet line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 36,
+        "image": "/ishihara/plate_36.jpg",
+        "category": "vanishing",
+        "normal_vision": "violet and orange line",
+        "color_blind_vision": "blue-green and violet line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 37,
+        "image": "/ishihara/plate_37.jpg",
+        "category": "vanishing",
+        "normal_vision": "violet and orange line",
+        "color_blind_vision": "blue-green and violet line",
+        "protanopia": "",
+        "deuteranopia": ""
+    },
+    {
+        "id": 38,
+        "image": "/ishihara/plate_38.jpg",
+        "category": "vanishing",
+        "normal_vision": "orange line",
+        "color_blind_vision": "orange line",
+        "protanopia": "",
+        "deuteranopia": ""
+    }
+]

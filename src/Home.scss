@@ -1,0 +1,241 @@
+.default-font-size {
+  font-size: 1rem;
+}
+
+.hero-wrapper {
+  background: linear-gradient(135deg, #f9f0ff, #f2e6ff);
+  width: 100%;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: inherit; // let dyslexic font apply
+  color: #333;
+
+  &.dyslexic-font {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+
+    h1, h2, h3, p, button {
+      font-family: 'OpenDyslexic', Arial, sans-serif !important;
+    }
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 120px 20px 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #5d3b8c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .cta-button {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        white-space: nowrap;
+        width: auto;
+        display: inline-block;
+
+        &.small-btn {
+          min-width: 140px;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        &.find-jobs {
+          background-color: #8e44ad;
+          color: white;
+          border: none;
+
+          &:hover {
+            background-color: #732d91;
+          }
+        }
+
+        &.explore-schemes {
+          background-color: white;
+          color: #8e44ad;
+          border: 2px solid #8e44ad;
+
+          &:hover {
+            background-color: #f1e6ff;
+            color: #732d91;
+            border-color: #732d91;
+          }
+        }
+      }
+    }
+  }
+
+  .features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 60px 0 150px;
+
+    .feature-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: left;
+      border: 2px solid #e0d4f7;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      height: 100%;
+
+      &:hover {
+        background-color: #f9f0ff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-content {
+        h2 {
+          color: #6a3093;
+          margin-bottom: 12px;
+          font-size: 1.4rem;
+        }
+
+        p {
+          color: #666;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .latest-opportunities {
+    background-color: #f9f3ff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 40px;
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 25px;
+
+      h2 {
+        font-size: 1.7rem;
+        color: #6a3093;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+    }
+
+    .opportunities-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+
+      .opportunity-item {
+        background-color: white;
+        padding: 18px;
+        border-radius: 8px;
+        border-left: 4px solid #8e44ad;
+
+        h3 {
+          color: #6a3093;
+          margin-bottom: 8px;
+          font-size: 1.1rem;
+        }
+
+        p {
+          color: #666;
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .view-all-button {
+      padding: 10px 24px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        background-color: #732d91;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px;
+
+    .hero-section {
+      padding: 80px 15px 60px;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    .features-section {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.dyslexic-font {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+
+  button,
+  h1,
+  h2,
+  h3,
+  p,
+  .cta-button,
+  .feature-card,
+  .opportunity-item,
+  .view-all-button {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  }
+}
+
