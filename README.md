@@ -1,5 +1,4 @@
 # DivyaSarthi
-# DivyaSarthi
 
 **DivyaSarthi** is an inclusive and accessible platform designed to bridge the gap between **rural communities** and **opportunities** by showcasing **government and private schemes**, **education**, **employment options**, and **benefits for persons with disabilities**. Built using the **MERN/MEEN stack**, DivyaSarthi emphasizes **real-time accessibility**, **smart personalization**, and **AI-driven adaptability**.
 
@@ -35,12 +34,11 @@
 
 ## Tech Stack
 
-- **Frontend:** React / Angular, Tailwind CSS  
+- **Frontend:** React, Tailwind CSS  
 - **Backend:** Node.js + Express  
 - **Database:** MongoDB  
-- **Web Scraping:** Cheerio, Puppeteer  
+- **Web Scraping:** Requests, BeautifulSoup
 - **AI/ML Integration:** Python + Flask API  
-- **Deployment:** Vercel / Heroku / Netlify (depending on component)
 
 ---
 
