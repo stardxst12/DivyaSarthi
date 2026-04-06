@@ -1,38 +1,72 @@
 require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
-
-const userRoute = require("./routes/user");
-const authRoute = require("./routes/auth");
-const schemeRoutes = require('./routes/schemes');
-
 
 const app = express();
 
-// Enable CORS for frontend access
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
+const corsOrigin = process.env.CORS_ORIGIN;
+const corsOptions = {
+  origin: corsOrigin ? corsOrigin.split(",").map((s) => s.trim()) : true,
+  credentials: true,
+};
+app.use(cors(corsOptions));
+app.use(express.json({ limit: process.env.JSON_BODY_LIMIT || "100kb" }));
 
-// Middleware to parse JSON
-app.use(express.json());
+function lazyRoute(loader) {
+  let router;
+  return (req, res, next) => {
+    if (!router) router = loader();
+    return router(req, res, next);
+  };
+}
 
-// Connect to MongoDB
-mongoose
-  .connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true, dbName:"DivyaSarthi" })
-  .then(() => console.log("DB Connection Successful!"))
-  .catch((err) => console.log("DB Connection Error:", err));
+app.use("/api/auth", lazyRoute(() => require("./routes/auth")));
+app.use("/api/users", lazyRoute(() => require("./routes/user")));
+app.use("/api", lazyRoute(() => require("./routes/schemes")));
 
-// Routes
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use('/api', schemeRoutes);
+const PORT = Number(process.env.PORT) || 5000;
 
-
-// Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Backend server is running on port ${PORT}!`);
 });
+
+setImmediate(() => {
+  const mongoose = require("mongoose");
+  mongoose.set("strictQuery", true);
+
+  const url = process.env.MONGO_URL;
+  if (!url) {
+    console.warn("MONGO_URL is not set; database features will fail until it is configured.");
+    return;
+  }
+
+  mongoose
+    .connect(url, {
+      dbName: process.env.MONGO_DB_NAME || "DivyaSarthi",
+      maxPoolSize: Number(process.env.MONGO_MAX_POOL_SIZE) || 5,
+      minPoolSize: Number(process.env.MONGO_MIN_POOL_SIZE) || 0,
+      serverSelectionTimeoutMS: Number(process.env.MONGO_SERVER_SELECTION_TIMEOUT_MS) || 10_000,
+    })
+    .then(() => console.log("DB Connection Successful!"))
+    .catch((err) => console.log("DB Connection Error:", err.message));
+});
+
+function shutdown(signal) {
+  return () => {
+    console.log(`${signal} received, closing HTTP server…`);
+    server.close(() => {
+      const mongoose = require("mongoose");
+      if (mongoose.connection.readyState === 1) {
+        mongoose.connection
+          .close()
+          .then(() => process.exit(0))
+          .catch(() => process.exit(1));
+      } else {
+        process.exit(0);
+      }
+    });
+  };
+}
+
+process.on("SIGTERM", shutdown("SIGTERM"));
+process.on("SIGINT", shutdown("SIGINT"));
