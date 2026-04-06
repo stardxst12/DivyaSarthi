@@ -2,7 +2,6 @@ const router = require("express").Router();
 const User = require("../models/User");
 const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require("../middleware/authMiddleware");
 
-// ✅ Get logged-in user profile (Requires Authentication)
 router.get("/profile", verifyToken, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select("-password"); // Exclude password
@@ -13,7 +12,6 @@ router.get("/profile", verifyToken, async (req, res) => {
     }
 });
 
-// ✅ Get all users (Admin only)
 router.get("/all", verifyTokenAndAdmin, async (req, res) => {
     try {
         const users = await User.find().select("-password");
@@ -23,7 +21,6 @@ router.get("/all", verifyTokenAndAdmin, async (req, res) => {
     }
 });
 
-// ✅ Get user by ID (Admin only)
 router.get("/:id", verifyTokenAndAdmin, async (req, res) => {
     try {
         const user = await User.findById(req.params.id).select("-password");
@@ -34,7 +31,6 @@ router.get("/:id", verifyTokenAndAdmin, async (req, res) => {
     }
 });
 
-// ✅ Update user (Only the user themselves or admin)
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     try {
         if (req.body.password) {
@@ -48,7 +44,6 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     }
 });
 
-// ✅ Delete user (Only the user themselves or admin)
 router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     try {
         await User.findByIdAndDelete(req.params.id);
