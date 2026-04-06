@@ -1,1 +1,63 @@
-node_modules
+# ----------------------------
+# Dependencies
+# ----------------------------
+node_modules/
+.pnpm-store/
+.npm/
+
+# ----------------------------
+# Build outputs
+# ----------------------------
+dist/
+build/
+.vite/
+
+# ----------------------------
+# Environment variables (CRITICAL)
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# Logs
+# ----------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Editor / IDE
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Runtime / temp
+# ----------------------------
+tmp/
+temp/
+.cache/
+
+# ----------------------------
+# Node / backend specific
+# ----------------------------
+coverage/
+*.pid
+*.seed
+
+# ----------------------------
+# Optional: MongoDB local files (if any)
+# ----------------------------
+data/
+*.db
