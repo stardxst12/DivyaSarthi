@@ -4,6 +4,10 @@
 
 ---
 
+<img width="2482" height="1157" alt="image" src="https://github.com/user-attachments/assets/c01d7100-21cd-408c-8aaf-ff079a640857" />
+
+
+
 ## Features
 
 ### Scheme & Opportunity Discovery
@@ -20,10 +24,14 @@
   - **Keyboard/mouse navigation**
   - **Text-to-speech** for visually impaired users
   - **Parkinson’s detection-based UI scaling** (via ML model)
+  <img width="2538" height="1152" alt="image" src="https://github.com/user-attachments/assets/d1573f60-c827-4e8d-8b0d-c9afe39cd42e" />
+
 
 ### AI Integrations
 - **Parkinson’s Prediction API** – Adjusts UI based on tremors, typos, and misclicks.
 - Future Scope: Voice command navigation, adaptive content simplification.
+<img width="1678" height="272" alt="image" src="https://github.com/user-attachments/assets/d319a3d6-1cef-4da2-aafb-1e6002c0cd94" />
+
 
 ### User-Centric Features
 - **Personal dashboard** to save favorite schemes and set reminders.
