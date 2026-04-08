@@ -4,9 +4,7 @@
 
 ---
 
-<img width="2482" height="1157" alt="image" src="https://github.com/user-attachments/assets/c01d7100-21cd-408c-8aaf-ff079a640857" />
-
-
+<img width="1281" height="3360" alt="localhost_5173_ (1)" src="https://github.com/user-attachments/assets/950809f0-0d91-47ea-8995-e08055194223" />
 
 ## Features
 
@@ -14,9 +12,12 @@
 - Browse curated **government** and **private sector** schemes.
 - Filter by **category** (health, education, jobs, women-centric, etc.)
 - **Web scraping** ensures up-to-date scheme data.
+<img width="1441" height="1047" alt="image" src="https://github.com/user-attachments/assets/029e3c93-9a43-45a7-b635-66bb13790754" />
 
 ### Accessibility Enhancements
 - **Ishihara Color Blindness Test** – Adjust site contrast dynamically.
+<img width="1900" height="1125" alt="image" src="https://github.com/user-attachments/assets/3b6252be-e0d5-4838-b565-03c752c6feb5" />
+
 - Support for:
   - **Dyslexia-friendly fonts**
   - **Negative/High/Greyscale contrast modes**
